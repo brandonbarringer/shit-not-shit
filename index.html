@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shit, Not Shit</title>
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Shit, Not Shit">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Shit, Not Shit">
+    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#2F3BA2">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+-->
+
+<!-- Material Design icons -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    <!-- Material Design Lite page styles:
+    You can choose other color schemes from the CDN, more info here http://www.getmdl.io/customize/index.html
+    Format: material.color1-color2.min.css, some examples:
+    material.red-teal.min.css
+    material.blue-orange.min.css
+    material.purple-indigo.min.css
+-->
+<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+
+<!-- Your styles -->
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+	
+	<main class="main">
+	    <div class="content content--first">
+	        <div class="content__inner">
+	            <form action="#!" class="query">
+	                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+	                    <input class="mdl-textfield__input" type="text" id="input-shit">
+	                    <label class="mdl-textfield__label" for="input-shit">Cats, The Weather, Trump, Google.com etc...</label>
+	                </div>
+	                <button class="query__submit transition mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"> Check if Shit </button>
+	            </form>
+	        </div>
+	    </div>
+	    <div class="content content--second">
+	        <div class="content__inner">
+	            <p class="content__headline">This will change</p>
+	            <p class="content__description">This will also change.</p>
+	            <button class="transition mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Go Back</button>
+	        </div>
+	    </div>
+	</main>
+	<div class="ripple-wrap"><div class="ripple"></div></div>
+
+	  <script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+	<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+</html>

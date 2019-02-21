@@ -1,0 +1,27 @@
+{
+  "name": "gsr",
+  "version": "1.0.0",
+  "description": "gsr main website",
+  "main": "",
+  "scripts": {
+    "scss": "node-sass -i --output-style compressed ./build-assets/sass/ -o ./build-assets/css/src/",
+    "autoprefixer": "postcss ./build-assets/css/src/* -u autoprefixer --dir ./build-assets/css/dist/",
+    "mover": "copyfiles -f ./build-assets/css/dist/*.css ./build-assets/css/vendor-css/*.css ./assets/css",
+    "build": "npm run scss && npm run autoprefixer && npm run mover",
+    "watch": "nodemon -e scss -x \"npm run build\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.10.0",
+    "postcss": "^7.0.14",
+    "watch": "^1.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.4.8",
+    "copyfiles": "^2.1.0",
+    "nodemon": "^1.18.10",
+    "postcss-cli": "^6.1.1"
+  }
+}
