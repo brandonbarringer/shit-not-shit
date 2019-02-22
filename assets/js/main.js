@@ -2,6 +2,7 @@ $(document).ready(function() {
   var rippleWrap = $('.ripple-wrap');
   var rippler = $('.ripple');
   var finish = false;
+  var count = 0;
   var monitor = function(el) {
     var computed = window.getComputedStyle(el, null);
     var borderwidth = parseFloat(
@@ -41,9 +42,32 @@ $(document).ready(function() {
     });
   });
 
+  function checkShit() {
+    count++
+    if (count > 1) {
+      count = 0
+      $('body').removeClass('shit not-shit');
+      return;
+    }
+    else if ( randomTruthy() ) {
+      $('body').addClass('shit');
+      $('.content__headline').text('Shit');
+      $('.content__description').text('Yep. Confirmed Shit');
+    } else {
+      $('body').addClass('not-shit');
+      $('.content__headline').text('Not Shit');
+      $('.content__description').text('Definitely Not Shit');
+    }
+  }
+
+  function randomTruthy() {
+    return Math.random() >= 0.5
+  }
+
   function swapContent() {
     var newContent = $('.content--first').html();
     $('.content--first').html(storedContent);
+    checkShit();
     storedContent = newContent;
     // do some Ajax, put it in the DOM and then set this to true
     setTimeout(function() {
